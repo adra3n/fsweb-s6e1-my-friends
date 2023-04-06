@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PetsList from './PetsList'
 
-export default function Friend({ friend, setFriendsData, friendsData }) {
+export default function Friend({ friend }) {
   /* 👉 önce başka bir compenenti bitirmen lazım? */
 
   /* 👉 Ya friend'leri yoksa? bunu unutmayalım. Bir şey yapmak lazım*/
@@ -36,11 +36,7 @@ export default function Friend({ friend, setFriendsData, friendsData }) {
 
         <div>
           {/* 👉 Tasarıma göre buraya hangi component gelmeli? */}
-          <PetsList
-            pets={friend.pets}
-            setFriendsData={setFriendsData}
-            friendsData={friendsData}
-          ></PetsList>
+          <PetsList pets={friend.pets}></PetsList>
         </div>
       </div>
     </div>
