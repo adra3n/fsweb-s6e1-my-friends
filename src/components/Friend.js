@@ -7,8 +7,8 @@ import PetsList from './PetsList'
 
 export default function Friend({ friend, setFriendsData }) {
   const marriedStatusHandler = () => {
-    setFriendsData((prevFriends) =>
-      prevFriends.map((f) => {
+    setFriendsData((prev) =>
+      prev.map((f) => {
         if (f.id === friend.id) {
           return {
             ...f,
