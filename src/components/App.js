@@ -11,7 +11,6 @@ export default function App() {
   const searchHandler = (prompt) => {
     const searchResult = friendsData.filter((f) => {
       const lowerCaseName = f.name.toLowerCase()
-
       return lowerCaseName.includes(prompt.toLowerCase())
     })
     console.log(searchResult)
@@ -23,8 +22,8 @@ export default function App() {
       {/* 👉 Buraya hangi componentler gelecek? */}
       <Search searchHandler={searchHandler} />
       <FriendsList
-        friendsData={filteredFriendsData}
-        setFriendsData={setFriendsData}
+        filteredFriendsData={filteredFriendsData}
+        setFilteredFriendsData={setFilteredFriendsData}
       />
     </div>
   )
